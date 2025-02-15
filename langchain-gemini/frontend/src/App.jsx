@@ -8,7 +8,7 @@ function App() {
   const sendMessage = async () => {
     if (!message) return;
     try {
-      const res = await axios.post("http://localhost:5000/chat", { message });
+      const res = await axios.post("http://localhost:5003/chat", { message });
       setResponse(res.data.response);
     } catch (error) {
       console.error("Error:", error);
